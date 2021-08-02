@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-salesforce" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-salesforce-{{ version }}.tar.gz
-  sha256: fc529294ffdd8d629ba3f0009d1d95cdd16849e04318956d27f249eb7c6748b2
+  sha256: c9b77cf19f56f66645b14f741052c1ef8384567aa299d69449892e4afec6da19
 
 build:
   number: 0
