@@ -17,13 +17,12 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
-    - setuptools
-    - wheel
   run:
-    - apache-airflow >=2.1.0
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - pandas >=0.17.1,<2.0
     - simple-salesforce >=1.0.0
     - tableauserverclient
 
