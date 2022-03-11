@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-salesforce" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-salesforce-{{ version }}.tar.gz
-  sha256: 75bb870b9ae6ce3feef0986d7489725cba750fc99ba7df96194d184dc582540c
+  sha256: ff95798cfc03f63afb852545cc4332560663100e1f49871a3407a1ea78091881
 
 build:
   number: 0
@@ -17,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - pandas >=0.17.1,<2.0
+    - pandas >=0.17.1,<1.4
     - simple-salesforce >=1.0.0
     - tableauserverclient
 
