@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-salesforce" %}
-{% set version = "3.4.4" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-salesforce-{{ version }}.tar.gz
-  sha256: d8f7ed06ff965ec5d74ecb927f80f3d8bf6661e5ab0e3c18257b86b87d7e9088
+  sha256: a11c782de87feb4d00d4582660f6443dff01dbf4780f799867817885d50893c4
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - pandas >=0.17.1
     - simple-salesforce >=1.0.0
     - tableauserverclient
@@ -29,7 +29,7 @@ requirements:
 test:
   imports:
     - airflow.providers.salesforce
-    - airflow.providers.salesforce.example_dags
+    - airflow.providers.salesforce.hooks
   commands:
     - pip check
   requires:
