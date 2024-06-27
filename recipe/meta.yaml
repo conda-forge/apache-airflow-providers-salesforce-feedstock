@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow >=2.7.0
-    - pandas >=1.2.5,<2.2
+    - pandas >=2.1.2,<2.2
     - simple-salesforce >=1.0.0
 
 test:
