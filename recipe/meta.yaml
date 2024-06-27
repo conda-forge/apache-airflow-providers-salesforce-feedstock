@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-salesforce" %}
-{% set version = "5.7.1" %}
+{% set version = "5.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_salesforce-{{ version }}.tar.gz
-  sha256: d03e2ad0c3294b19d9bc681c638100a5b626188fbe74cecc217c83a407f3fe7c
+  sha256: c4cfbf90bda0c65e658a172e3e8fb9b1ad43dc7986c9630aada820a426761fb9
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow >=2.7.0
-    - pandas >=1.2.5,<2.2
+    - pandas >=2.1.2,<2.2
     - simple-salesforce >=1.0.0
 
 test:
