@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-salesforce" %}
-{% set version = "5.9.0" %}
+{% set version = "5.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_salesforce-{{ version }}.tar.gz
-  sha256: 3e7a9fcf01021e7b4229aa3dcee1925f34ac471768da1f10a03cd041a0739a8b
+  sha256: 4b47815d9162d9972704aa0916db0a56847c671446598e09bab5080e6e6556f0
 
 build:
   noarch: python
@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.10.1
     - pip
   run:
     - python >={{ python_min }},<4.dev0
     - apache-airflow >=2.9.0
-    - pandas >=2.1.2,<2.2
     - simple-salesforce >=1.0.0
+    - pandas >=2.1.2,<2.2
 
 test:
   imports:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-salesforce for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/salesforce/LICENSE
+  license_file: src/airflow/providers/salesforce/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-salesforce/stable/index.html
   dev_url: https://github.com/apache/airflow/
