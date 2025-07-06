@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-salesforce" %}
 {% set version = "5.11.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
