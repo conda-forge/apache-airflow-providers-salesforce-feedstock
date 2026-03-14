@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-salesforce
-  version: "5.12.2"
+  version: 5.12.3
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_salesforce-${{ version }}.tar.gz
-  sha256: 7e98c8effcf6871332d4b8b87ae77fe52438f10b00c28432548b46decaa18800
+  sha256: 3257b6a6d6d3bcd91c14066de6dd8a3fcb64bf97d8594d1170bcac563cd60fe3
 
 build:
   noarch: python
@@ -25,13 +25,11 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.10.1
     - simple-salesforce >=1.0.0
-    # more restrictive for python >=3.13
-    - pandas >=2.2.3
-
+    - pandas >=2.1.2
 tests:
   - python:
       imports:
-      - airflow.providers.salesforce
+        - airflow.providers.salesforce
       pip_check: true
       python_version: ${{ python_min }}.*
 
