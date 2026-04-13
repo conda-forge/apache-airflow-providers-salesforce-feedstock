@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-salesforce
-  version: 5.14.0
+  version: "5.14.0"
 
 package:
   name: ${{ name|lower }}
@@ -25,13 +25,17 @@ requirements:
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.10.1
     - simple-salesforce >=1.0.0
-    - pandas >=2.1.2
+    # more restrictive for python >=3.14
+    - pandas >=2.3.3
+
 tests:
   - python:
       imports:
         - airflow.providers.salesforce
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
